@@ -2,7 +2,7 @@ import requests
 import json
 import conf
 
-sandbox = "https:sandboxapicdc.cisco.com"
+sandbox = "https://sandboxapicdc.cisco.com"
 def obtener_token(usuario,clave):
     url = sandbox + "/api/aaaLogin.json"
     body = {
