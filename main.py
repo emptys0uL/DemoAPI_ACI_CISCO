@@ -37,6 +37,11 @@ def top_system():
     requests.packages.urllib3.disable_warnings()
     try:
         respuesta = requests.get(sandbox+"/api/class/topSystem.json", headers=cabecera, cookies=galleta, verify=False)
+        print(respuesta.request.method)
+        print(respuesta.request.path_url)
+        print(respuesta.request.body)
+        print(respuesta.request.headers['Cookie'])
+        print(respuesta.headers) #response, header completo del servidor
         #1/0 test error
     except Exception as err:
         print("Error al consumir el API por problemas de conexion")
